@@ -7,11 +7,11 @@
 == Description
 
 link:http://nodered.org/[Node-Red]  est un outil visuel sur serveur Web leger pouvant tourner sur un link:http://nodered.org/docs/hardware/raspberrypi.html[Raspberry Pi]
-permettant de relier rapidement ensemble les objets connectés.
+permettant de relier rapidement des objets connectés.
 
 
 Node-Red basé sur Node.js, trés simple à utiliser, peut en quelques clics créer des liens entre senseurs, machine, services en ligne et base de données.
-Ces liens sont appelés des **flux** sous Node-red et font appels à des modules (**nodes**) disponibles sur un dépot http://flows.nodered.org/ accessible avec npm pour l'installation.
+Ces liens sont appelés des **flux** sous Node-red et font appels à des modules (**nodes**) disponibles sur un dépot accessible avec npm pour l'installation (une description de nodes et d'exemple de flux est visible sur cette page http://flows.nodered.org/)
 
 Il existe différents types de **nodes** dont une bonne partie est installés de base avec Node-Red:
 
@@ -50,10 +50,10 @@ et utlisant des logiciels comme link:http://www.domogik.org/fr/[Domogik]
 
 === Description de l'exemple
 
-Node-Red est utlisé dans cet exemple en test pour gérer un scénario domotique.
+Node-Red est utlisé en test pour gérer un scénario domotique.
 
-Le flux va lire régulièrement l'état d'une entrée (IO chips 1-wire) correspondant à l'ouverture d'une porte de garage.
-Si la porte est vue toujours ouverte aprés un horaire donné (20h), un message xPL de type osd.basic est envoyé sur le réseau pour le signaler visuellement.
+Le flux va lire régulièrement l'état d'une entrée (PIO chips 1-wire) correspondant à l'ouverture d'une porte de garage.
+Si la porte est vue toujours ouverte aprés un horaire donné (20h), un message xPL de type osd.basic est envoyé sur le réseau pour le signaler.
 Ce message xPL sera intercepté/traité par un autre module domotique qui diffusera l'information sur un link:https://github.com/vdomos/Horloge-Afficheur-a-matrice-de-led[afficheur à matrice de leds]. 
 
 {nbsp}
@@ -115,7 +115,7 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="
 
 
 
-Tout ce flux "scénarios" (génèration d'un message xPL en fonction d'une condition) se déroule sans avoir écrit la moindre ligne de codes ...
+Ce flux "scénarios" (génèration d'un message xPL en fonction d'une condition) se déroule sans avoir écrit la moindre ligne de codes ...
 
 
 {nbsp}
