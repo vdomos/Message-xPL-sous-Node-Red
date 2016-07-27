@@ -30,7 +30,7 @@ Voir docummentation link:http://nodered.org/docs/hardware/raspberrypi.html["Runn
 
 Vue de l'interface accessible sur http://localhost:1880/
 
-image::images/node-red-ui.png[caption="", title="", alt="", width="500", link="images/node-red-ui.png"]
+image::images/node-red-ui.png[caption="", title="", alt="", width="800", link="images/node-red-ui.png"]
 
 
 {nbsp}
@@ -86,32 +86,32 @@ Voici en images, la configuration des différents nodes pour faire fonctionner c
 
 * Vue d'ensemble
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_1.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_1.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_1.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_1.png"]
 
 
 * Configuration Node **Cron**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_2.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_2.png"]
 
 * Configuration Node **Owfs**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
 
 * Configuration Node **Switch**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_4.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_4.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_4.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_4.png"]
 
 * Configuration Node **Template**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_5.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_5.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_5.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_5.png"]
 
 * Configuration Node **UDP Out**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_6.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_6.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_6.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_6.png"]
 
 * Configuration Node **Debug**
 
-image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_7.png"]
+image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_7.png"]
 
 
 {nbsp}
