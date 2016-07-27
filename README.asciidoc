@@ -126,6 +126,14 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="
 
 === Réception des messages xPL
 
+==== Log xPL
+
+---------------------------------------------------------------------------------------------------
+2016-07-27 20:09:01  xpl-cmnd { hop=1 source=domos-nodered.hera target=* } osd.basic { command='write' text='PORTE GARAGE RESTEE OUVERTE' }
+2016-07-27 20:29:01  xpl-cmnd { hop=1 source=domos-nodered.hera target=* } osd.basic { command='write' text='PORTE GARAGE RESTEE OUVERTE' }
+2016-07-27 20:49:01  xpl-cmnd { hop=1 source=domos-nodered.hera target=* } osd.basic { command='write' text='PORTE GARAGE RESTEE OUVERTE' }
+---------------------------------------------------------------------------------------------------
+
 
 {nbsp}
 
