@@ -114,12 +114,15 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_6.png[caption="", title="
 image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_7.png"]
 
 
+{nbsp}
 
-Ce flux "scénarios" (génèration d'un message xPL en fonction d'une condition) se déroule sans avoir écrit la moindre ligne de codes ...
+=== Réception des messages xPL
 
 
 {nbsp}
 
-=== Réception des messages xPL
+== Conclusion
+
+Cet exemple de flux "scénarios" (génèration d'un message xPL en fonction de conditions) se déroule sans avoir écrit la moindre ligne de codes. Ce qui montre la simplicité d'utlisation de ce produit.
 
 
