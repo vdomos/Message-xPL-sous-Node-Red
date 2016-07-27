@@ -73,7 +73,7 @@ Voici le cablage ainsi que son montage en situation réel:
 Le flux (flow) Node-Red sera décomposé en différent nodes comme ceci:
 
 * Node **Cron** permettant de lancer périodique une action.
-* Node **Owfs** pour la lecture d'un chip PIO
+* Node **Owfs** pour la lecture d'un chip **1-wire** PIO
 * Node **Switch** vérifie l'état de l'entrée
 * Node **Template** pour formater le message xPL
 * Node **UDP Out** pour l'envoie du message xPL (il n'existe pas à l'heure actuelle de node xPL dédié !)
@@ -101,7 +101,7 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="
 
 * Configuration Node **Owfs**
 
-**owfs** est programme pilotant le bus **1-wire**.
+**owfs** est un programme pilotant le bus **1-wire**.
 
 image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
 
