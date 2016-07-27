@@ -67,10 +67,10 @@ Un chip **1-wire DS2405** relié à un bouton poussoir de porte permettra de dé
 Voici le cablage ainsi que son montage en situation réel:
 
 image::images/Detecteur_Ouverture_Porte_1wire_1.png[caption="", title="", alt="", width="300",link="images/Detecteur_Ouverture_Porte_1wire_1.png"]
+{nbsp}
 
-image::images/Detecteur_Ouverture_Porte_1wire_2.jpg[caption="", title="", alt="",width="300",link="images/Detecteur_Ouverture_Porte_1wire_2.jpg"]
-
-image::images/Detecteur_Ouverture_Porte_1wire_3.jpg[caption="", title="", alt="", width="300",link="images/Detecteur_Ouverture_Porte_1wire_3.jpg"]
+image::images/Detecteur_Ouverture_Porte_1wire_2.jpg[caption="", title="", alt="",width="250",link="images/Detecteur_Ouverture_Porte_1wire_2.jpg"]
+image::images/Detecteur_Ouverture_Porte_1wire_3.jpg[caption="", title="", alt="", width="250",link="images/Detecteur_Ouverture_Porte_1wire_3.jpg"]
 
 
 {nbsp}
