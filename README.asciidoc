@@ -1,0 +1,125 @@
+
+= Message xPL sous Node-Red
+:toc:
+
+{nbsp}
+
+== Description
+
+link:http://nodered.org/[Node-Red]  est un outil visuel sur serveur Web leger pouvant tourner sur un link:http://nodered.org/docs/hardware/raspberrypi.html[Raspberry Pi]
+permettant de relier rapidement ensemble les objets connectés.
+
+
+Node-Red basé sur Node.js, trés simple à utiliser, peut en quelques clics créer des liens entre senseurs, machine, services en ligne et base de données.
+Ces liens sont appelés des **flux** sous Node-red et font appels à des modules (**nodes**) disponibles sur un dépot http://flows.nodered.org/ accessible avec npm pour l'installation.
+
+Il existe différents types de **nodes** dont une bonne partie est installés de base avec Node-Red:
+
+* **Inputs**: serial, tcp, udp, http, file, mqtt, redis, owfs ...
+* **Outputs**: serial, tcp, udp, http, file, mqtt, redis ...
+* **Fonctions**: Functions (javascript), Test, csv, json ...
+* **Communication**: e-mail, twitter, pushbulet ...
+* **Stockage**: file, mysql, redis, influxdb, mongodb ...
+
+
+{nbsp}
+
+=== Installation sur Raspberry-Pi
+
+Voir docummentation link:http://nodered.org/docs/hardware/raspberrypi.html["Running on Raspberry Pi"]
+
+Vue de l'interface accessible sur http://localhost:1880/
+
+image::images/node-red-ui.png[caption="", title="", alt="", width="500", link="images/node-red-ui.png"]
+
+
+{nbsp}
+
+=== Documentation
+
+Documentation sur le site link:http://nodered.org/docs/[Node-Red]
+
+{nbsp}
+
+== Utilisation de Node-Red en domotique
+
+Dans cette exemple, Node-Red est utilisé dans une installation Domotique hétérogène sous Linux basée sur les protocoles xPL, MQTT 
+et utlisant des logiciels comme link:http://www.domogik.org/fr/[Domogik]
+
+{nbsp}
+
+=== Description de l'exemple
+
+Node-Red est utlisé dans cet exemple en test pour gérer un scénario domotique.
+
+Le flux va lire régulièrement l'état d'une entrée (IO chips 1-wire) correspondant à l'ouverture d'une porte de garage.
+Si la porte est vue toujours ouverte aprés un horaire donné (20h), un message xPL de type osd.basic est envoyé sur le réseau pour le signaler visuellement.
+Ce message xPL sera intercepté/traité par un autre module domotique qui diffusera l'information sur un link:https://github.com/vdomos/Horloge-Afficheur-a-matrice-de-led[afficheur à matrice de leds]. 
+
+{nbsp}
+
+=== Partie matériel
+
+Détecteur placé sur la porte de garage:
+
+{nbsp}
+
+=== Détail du flux
+
+Le flux (flow) Node-Red sera décomposé en différent nodes comme ceci:
+
+* Node **Cron** permettant de lancer périodique une action.
+* Node **Owfs** pour la lecture d'un chip PIO
+* Node **Switch** vérifie l'état de l'entrée
+* Node **Template** pour formater le message xPL
+* Node **UDP Out** pour l'envoie du message xPL (il n'existe pas à l'heure actuelle de node xPL dédié !)
+* Node **Debug**, permet de suivre le déroulement du flux à différente étapes si besoin.
+
+
+{nbsp}
+
+=== Création du flux
+
+Accés à l'interface accessible sur http://host:1880/:
+
+Voici en images, la configuration des différents nodes pour faire fonctionner ce "flow":
+
+* Vue d'ensemble
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_1.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_1.png"]
+
+
+* Configuration Node **Cron**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_2.png"]
+
+* Configuration Node **Owfs**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
+
+* Configuration Node **Switch**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_4.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_4.png"]
+
+* Configuration Node **Template**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_5.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_5.png"]
+
+* Configuration Node **UDP Out**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_6.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_6.png"]
+
+* Configuration Node **Debug**
+
+image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="", alt="", width="500", link="images/nodered_Notification-xPL-OSD_PorteGarage_7.png"]
+
+
+
+Tout ce flux "scénarios" (génèration d'un message xPL en fonction d'une condition) se déroule sans avoir écrit la moindre ligne de codes ...
+
+
+{nbsp}
+
+=== Réception des messages xPL
+
+
