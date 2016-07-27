@@ -28,7 +28,7 @@ Il existe différents types de **nodes** dont une bonne partie est installés de
 
 Voir docummentation link:http://nodered.org/docs/hardware/raspberrypi.html["Running on Raspberry Pi"]
 
-Vue de l'interface accessible sur http://localhost:1880/
+Vue de l'interface avec un exemple de **flux** accessible sur http://localhost:1880/
 
 image::images/node-red-ui.png[caption="", title="", alt="", width="800", link="images/node-red-ui.png"]
 
@@ -43,24 +43,28 @@ Documentation sur le site link:http://nodered.org/docs/[Node-Red]
 
 == Utilisation de Node-Red en domotique
 
-Dans cette exemple, Node-Red est utilisé dans une installation Domotique hétérogène sous Linux basée sur les protocoles xPL, MQTT 
-et utlisant des logiciels comme link:http://www.domogik.org/fr/[Domogik]
+Node-Red est intégré dans une installation Domotique hétérogène sous Linux basée sur les protocoles xPL, MQTT et utlisant des logiciels comme link:http://www.domogik.org/fr/[Domogik]
 
 {nbsp}
 
 === Description de l'exemple
 
-Node-Red est utlisé en test pour gérer un scénario domotique.
+Node-Red est utlisé dans cette exemple, en test pour gérer un scénario domotique.
 
-Le flux va lire régulièrement l'état d'une entrée (PIO chips 1-wire) correspondant à l'ouverture d'une porte de garage.
-Si la porte est vue toujours ouverte aprés un horaire donné (20h), un message xPL de type osd.basic est envoyé sur le réseau pour le signaler.
-Ce message xPL sera intercepté/traité par un autre module domotique qui diffusera l'information sur un link:https://github.com/vdomos/Horloge-Afficheur-a-matrice-de-led[afficheur à matrice de leds]. 
+Le flux va lire régulièrement l'état d'une entrée (PIO chips **1-wire**) correspondant à l'ouverture d'une porte de garage.
+Si la porte est vue toujours ouverte aprés un horaire donné (20h), un message **xPL** de type **osd.basic** est envoyé sur le réseau pour le signaler.
+Ce message xPL sera intercepté/traité par un programme domotique qui diffusera l'information sur un link:https://github.com/vdomos/Horloge-Afficheur-a-matrice-de-led[afficheur à matrice de leds]. 
 
 {nbsp}
 
 === Partie matériel
 
-Détecteur placé sur la porte de garage:
+Information non importante pour l'exemple mais permet de faire le lien avec un exemple concret.
+
+Détecteur DIY placé sur la porte de garage basculante:
+
+Un chip **1-wire DS2405** relié à un bouton poussoir de porte permettra de détecter l'état de la port basculante.
+Voici le cablage ainsi que son montage en situation réel:
 
 {nbsp}
 
@@ -86,6 +90,8 @@ Voici en images, la configuration des différents nodes pour faire fonctionner c
 
 * Vue d'ensemble
 
+Il suffira de choisir les **nodes** sur la partie gauche, de les "drag and drop" sur la page centrale pour ensuite les relier ensemble avec la souris.
+
 image::images/nodered_Notification-xPL-OSD_PorteGarage_1.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_1.png"]
 
 
@@ -94,6 +100,8 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_1.png[caption="", title="
 image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_2.png"]
 
 * Configuration Node **Owfs**
+
+**owfs** est programme pilotant le bus **1-wire**.
 
 image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
 
@@ -124,5 +132,6 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="
 == Conclusion
 
 Cet exemple de flux "scénarios" (génèration d'un message xPL en fonction de conditions) se déroule sans avoir écrit la moindre ligne de codes. Ce qui montre la simplicité d'utlisation de ce produit.
+La disponibilité de nombreux **nodes** permet de l'interfacer avec différents matériels, services internet ou box domotique.
 
 
