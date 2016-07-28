@@ -109,15 +109,20 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_2.png[caption="", title="
 
 * Configuration Node **Owfs**
 
-**owfs** est un programme pilotant le bus **1-wire**.
+**owfs** est un programme "daemon" pilotant le bus **1-wire**.
 
 image::images/nodered_Notification-xPL-OSD_PorteGarage_3.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_3.png"]
 
 * Configuration Node **Switch**
 
+Ce node permet de faire un test de la valeur lue (msg.payload) sur le chip 1-wire.
+La variable **msg.payload** est utilisée dans le tout déroulement du **flux** pour faire passer les données entre **nodes**.
+
 image::images/nodered_Notification-xPL-OSD_PorteGarage_4.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_4.png"]
 
 * Configuration Node **Template**
+
+Ce  **node*** nous permet de créer le message xPL au format texte (ne pas oublier le "saut de ligne" en fin de ligne 11).
 
 image::images/nodered_Notification-xPL-OSD_PorteGarage_5.png[caption="", title="", alt="", width="800", link="images/nodered_Notification-xPL-OSD_PorteGarage_5.png"]
 
@@ -149,6 +154,6 @@ image::images/nodered_Notification-xPL-OSD_PorteGarage_7.png[caption="", title="
 == Conclusion
 
 Cet exemple de flux "scénarios" (génèration d'un message xPL en fonction de conditions) se déroule sans avoir écrit la moindre ligne de codes. Ce qui montre la simplicité d'utlisation de ce produit.
-La disponibilité de nombreux **nodes** permet de l'interfacer avec différents matériels, services internet ou box domotique.
+La disponibilité de nombreux **nodes** permet de l'interfacer avec différents matériels, services internet, logiciels ou box domotique.
 
 
